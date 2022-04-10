@@ -1,0 +1,41 @@
+.input-counter-range[type='range'] {
+  overflow: hidden;
+  width: 100%;
+  -webkit-appearance: none;
+  background-color: #DCDCDC;
+  height: 2px;
+  border-radius: 2px;
+}
+
+.input-counter-range[type='range']::-webkit-slider-runnable-track {
+  height: 2px;
+  -webkit-appearance: none;
+  color: #13bba4;
+  margin-top: -1px;
+}
+
+.input-counter-range[type='range']::-webkit-slider-thumb {
+  width: 0px;
+  -webkit-appearance: none;
+  height: 0px;
+  cursor: default;
+  background: #43e5f7;
+  box-shadow: -300px 0 0 300px #FF6A6A;
+}
+
+.input-counter-range[type="range"]::-moz-range-progress {
+  height: 2px;
+  background-color: #FF6A6A;
+}
+
+.input-counter-range[type="range"]::-moz-range-track {
+  height: 2px;
+  background-color: #DCDCDC;
+}
+
+.input-counter-range[type="range"]::-moz-range-thumb {
+  height: 2px;
+  background-color: #FF6A6A;
+  border: none;
+  outline: none;
+}

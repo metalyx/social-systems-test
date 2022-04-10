@@ -1,0 +1,125 @@
+@import '../../styles/variables/all.scss';
+
+.pick-task {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid $color--nvlight-gray;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__left-column {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      margin-bottom: 10px;
+    }
+
+    .img {
+      margin-right: 20px;
+
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  &__right-column {
+    width: 390px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    .pick-task-input {
+      width: 100%;
+      position: relative;
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+
+      input {
+        width: 100%;
+        height: 50px;
+        outline: none;
+        border: 2px solid $color--gray-bc;
+        box-sizing: border-box;
+        border-radius: 6px;
+        font-size: 16px;
+        padding-left: 20px;
+      }
+
+
+      span {
+        position: absolute;
+        top: 17px;
+        right: 20px;
+        color: $color--gray;
+      }
+    }
+  }
+}
+
+.pick-task:last-child {
+  border: none;
+}
+
+.pick-task::after {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: -20px;
+  content: '';
+  width: 20px;
+  height: 1px;
+  background-color: $color--nvlight-gray;
+}
+
+.pick-task::before {
+  position: absolute;
+  display: block;
+  top: 100%;
+  right: -20px;
+  content: '';
+  width: 20px;
+  height: 1px;
+  background-color: $color--nvlight-gray;
+}
+
+.pick-task:last-child:after {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: -20px;
+  content: '';
+  width: 0px;
+  height: 0px;
+  background-color: $color--nvlight-gray;
+}
+
+.pick-task:last-child::before {
+  position: absolute;
+  display: block;
+  top: 100%;
+  right: -20px;
+  content: '';
+  width: 0px;
+  height: 0px;
+  background-color: $color--nvlight-gray;
+}

@@ -1,0 +1,125 @@
+@import '../../../../styles/variables/all.scss';
+
+.new-order {
+  width: 620px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  background-color: $color--bc-gray;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__head {
+    position: relative;
+    @include flex--center;
+    height: 75px;
+    border-radius: 6px;
+
+    span.close {
+      position: absolute;
+      top: 4px;
+      right: 7px;
+      color: $color--light-gray-cross;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    span.title {
+      font-family: 'Rubik-Medium';
+      font-size: 30px;
+      color: $color--light-black;
+    }
+  }
+
+  &__main {
+    min-height: 120px;
+    padding: 20px;
+    background-color: white;
+    position: relative;
+
+    span.main-title {
+      display: block;
+      margin-bottom: 10px;
+
+      font-family: 'Rubik-Medium';
+      font-size: 16px;
+      color: $color--light-black;
+    }
+
+    span.error {
+      display: block;
+      position: absolute;
+      bottom: 22px;
+      left: 25px;
+      color: $color--special-pink;
+    }
+  }
+
+  &__footer {
+    padding: 20px;
+    background-color: $color--bc-gray;
+    min-height: 140px;
+
+    display: flex;
+    flex-direction: column;
+
+    .total-price__wrapper {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+
+    .buttons__wrapper {
+      @include flex--center;
+
+      button {
+        width: 280px;
+        height: 40px;
+        outline: none;
+        border: none;
+        color: white;
+        background: $color--special-pink;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 32px;
+      }
+
+      button.inactive {
+        mix-blend-mode: normal;
+        opacity: 0.4;
+        box-shadow: none;
+      }
+
+      button:active {
+        background: #C53333;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      button:hover {
+        background: #FF4343;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+      }
+
+      button.inactive:hover {
+        background: #FF6A6A;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      button:first-child {
+        margin-right: 20px;
+        background: $color--button-hover-inactive;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      button:first-child:hover {
+        background: $color--button-hover-inactive;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+      }
+
+      button:first-child:active {
+        background: $color--button-inactive-active;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import '../../../../../styles/variables/all.scss';
+
+.order-row-profile {
+  width: 100%;
+  height: 90px;
+  padding: 20px;
+
+  display: flex;
+  border-bottom: 1px solid $color--vlight-gray;
+
+
+  .avatar {
+    width: 50px;
+    margin-right: 20px;
+
+    img {
+      width: 50px;
+      border-radius: 5px;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+
+    span {
+      font-size: 14px;
+      color: $color--light-blue;
+
+      a {
+        font-size: 14px;
+        color: $color--light-blue;
+        text-decoration: none;
+      }
+    }
+
+    span:first-child {
+      font-size: 20px;
+      color: $color--light-black;
+      margin-bottom: 5px;
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+      }
+    }
+
+  }
+}

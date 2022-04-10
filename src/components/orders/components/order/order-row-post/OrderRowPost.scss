@@ -1,0 +1,43 @@
+@import '../../../../../styles/variables/all.scss';
+
+.order-row-post {
+  width: 100%;
+  height: 90px;
+  padding: 20px;
+
+  display: flex;
+  border-bottom: 1px solid $color--vlight-gray;
+
+  .task-logo {
+    width: 50px;
+    margin-right: 20px;
+
+    img {
+      width: 50px;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &__title {
+      color: $color--gray;
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    &__counter {
+
+      .done-vs-total {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input {
+        display: block;
+      }
+    }
+  }
+}

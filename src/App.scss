@@ -1,0 +1,72 @@
+@import './styles/variables/all.scss';
+
+* {
+  font-family: 'Rubik-Regular';
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  @include flex--center;
+  flex-direction: column;
+  background-color: $color--vlight-gray;
+
+  &__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: scroll;
+    .head {
+      width: 700px;
+      margin-top: 10px;
+  
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+
+      button {
+        width: 250px;
+        height: 40px;
+  
+        border : none;
+        border-radius: 20px;
+        outline: none;
+  
+        color: white;
+        background-color: $color--special-pink;
+  
+        font-family: 'Rubik-Bold';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+  
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+        margin: 0;
+
+        button {
+          margin: 20px;
+          width: 100%;
+        }
+      }
+  
+    }
+
+    .orders {
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+}

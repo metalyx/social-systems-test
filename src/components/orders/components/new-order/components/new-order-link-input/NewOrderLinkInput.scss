@@ -1,0 +1,63 @@
+@import '../../../../../../styles/variables/all.scss';
+
+.new-order-link-input {
+  height: 70px;
+  width: 100%;
+  position: relative;
+  padding-bottom: 20px;
+
+  img {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+  }
+
+  input {
+    height: 100%;
+    width: 100%;
+    padding: 15px 20px;
+
+    font-size: 16px;
+    outline: none;
+    border: 2px solid #ECECEC;
+    border-radius: 6px;
+  }
+
+  input.with-logo {
+    padding-left: 70px;
+  }
+
+  input.onerror {
+    border: 2px solid $color--special-pink;
+  }
+
+  input::placeholder {
+    font-size: 16px;
+  }
+}
+
+.new-order-link-input.with-border {
+  border-bottom: 1px solid $color--vlight-gray;
+}
+
+.new-order-link-input.with-border::before {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: -20px;
+  content: '';
+  width: 20px;
+  height: 1px;
+  background-color: $color--vlight-gray;
+}
+
+.new-order-link-input.with-border::after {
+  position: absolute;
+  display: block;
+  top: 100%;
+  right: -20px;
+  content: '';
+  width: 20px;
+  height: 1px;
+  background-color: $color--vlight-gray;
+}
